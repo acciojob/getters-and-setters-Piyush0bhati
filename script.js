@@ -1,47 +1,44 @@
 //complete this code
 class Person {
-	constructor(name, age){
-		this.name = name
-		this.age = age
-	}
-	getName(){
-		return this.name
-	}
-	setAge(age){
-		
-	}
-    study(){
-		console.log(`${this.name} is studing`)
-	}
-	teach(){
-		console.log(`${this.name} is teaching`)
-	}
+    constructor(name, age) {
+        this._name = name;
+        this._age = age;
+    }
+
+    // Getter for name
+    get name() {
+        return this._name;
+    }
+
+    // Setter for name
+    set name(value) {
+        this._name = value;
+    }
+
+    // Getter for age
+    get age() {
+        return this._age;
+    }
+
+    // Setter for age
+    set age(value) {
+        this._age = value;
+    }
+    teach() {
+        console.log(`${this.name} is teaching`);
+    }
+     study() {
+        console.log(`${this.name} is studying`);
+    }
 }
 
 class Student extends Person {
-	
+   
 }
 
 class Teacher extends Person {
-	
+    
 }
-
-// Creating a Person instance
-const person = new Person("John", 25);
-console.log(person.name);  // Output: John
-
-person.age = 30;  // Using the setter to change the age
-console.log(person.age);  // Output: 30
-
-// Creating a Student instance
-const student = new Student("Alice", 22);
-student.study();  // Output: Alice is studying
-
-// Creating a Teacher instance
-const teacher = new Teacher("Bob", 40);
-teacher.teach();  // Output: Bob is teaching
-
-
 
 // Do not change the code below this line
 window.Person = Person;
