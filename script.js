@@ -11,10 +11,10 @@ class Person {
 		
 	}
     study(){
-		console.log(this.name, "is studing")
+		console.log(`${this.name} is studing`)
 	}
 	teach(){
-		console.log(this.name, "is teaching")
+		console.log(`${this.name} is teaching`)
 	}
 }
 
